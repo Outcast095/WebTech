@@ -1,0 +1,23 @@
+
+
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "jsx": "react-jsx",
+    "moduleResolution": "bundler", // Исправлено: лучше всего подходит для Webpack
+    "allowImportingTsExtensions": true, // Позволяет импортировать .ts файлы (если нужно)
+    "resolveJsonModule": true, // Позволяет делать import data from './data.json'
+    "allowJs": true, // Позволяет смешивать JS и TS файлы в одном проекте
+    "esModuleInterop": true,
+    "strict": true,
+    "isolatedModules": true, 
+    "noEmit": true, // Т.к. за генерацию кода у тебя отвечает Babel, а не TS
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"] // Твои алиасы
+    }
+  },
+  "include": ["src"]
+}
